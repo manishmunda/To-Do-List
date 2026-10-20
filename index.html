@@ -4,20 +4,35 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>To-Do-List</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>To Do List</header>
-    <main>
-        <section class="add-task">
-            <input type="text" class="" placeholder="Add new task...">
-        </section>
-        <section class="task-list">
-            <div class="task-contaiuner">
-                <ul>
-                    <li>task one</li>
-                </ul>
-            </div>
-        </section>
-    </main>
+    <div class="card">
+        <div class="heading-container">
+            <h1 class="heading">ToDo List</h1>
+            <p>Small steps. Big progress.</p>
+        </div>
+        <form class="input-container" id="taskForm">
+            <input type="text" id="taskInput" class="input" placeholder="Add new task..." aria-label="New task">
+            <button type="submit" class="add-btn"><span>+</span>Add</button>
+        </form>
+        <div class="filter-btns">
+            <button type="button" class="f-btn active" dtat-filter"all" >All</button>
+            <button type="button" class="f-btn" dtat-filter"active">Active</button>
+            <button type="button" class="f-btn" dtat-filter"completed">Completed</button>
+        </div>
+        <div class="task-list">
+
+            <ul id="taskList">
+                <!-- <li class="task-item completed">
+                    <input type="checkbox" checked>
+                    <span class="task-text">Read book</span>
+                    <button type="button" class="delete-btn" aria-label="Delete task">🗑</button>
+                </li> -->
+            </ul>
+
+        </div>
+    </div>
+    <script src="script.js"></script>
 </body>
 </html>
