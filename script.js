@@ -33,7 +33,16 @@ function render() {
                 <span class="task-text">${task.text}</span>
                 <button type="button" class="delete-btn" aria-label="Delete task">🗑</button>
     `;
+
+    li.querySelector(".task-text").textContent = task.text;
+
+    li.querySelector(".delete-btn").addEventListener("click", function () {
+      tasks = tasks.filter(function (t) {
+        return t.id !== task.id;
+      });
+      render();
+    });
+
     taskList.appendChild(li);
   });
 }
- 
